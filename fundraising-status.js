@@ -3,23 +3,9 @@ class FundraisingStatus extends HTMLElement {
 
 	static css = `
 :host {
-	display: block;
-}
-a {
 	display: flex;
 	align-items: center;
 	gap: .25em;
-	text-decoration: none;
-	color: inherit;
-	cursor: pointer;
-}
-a:hover {
-	background-color: rgba(0,0,0,.06);
-}
-@media (prefers-color-scheme: dark) {
-	a:hover {
-		background-color: rgba(255,255,255,.15);
-	}
 }
 progress {
 	flex-grow: 1;
@@ -77,13 +63,11 @@ progress {
 	}
 
 	async render({min, max, value}) {
-		this.shadowRoot.innerHTML = `<a href="https://opencollective.com/11ty">
-	<slot></slot>
+		this.shadowRoot.innerHTML = `<slot></slot>
 	<progress min="${min}" max="${max}" value="${value}"></progress>
 	<code>${this.formatPrice(value)}</code>
 	<code>/${this.formatPrice(max)}</code>
-	<code>${this.currency}</code>
-</a>`;
+	<code>${this.currency}</code>`;
 	}
 }
 

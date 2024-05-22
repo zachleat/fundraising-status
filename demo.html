@@ -13,6 +13,21 @@
 			color: light-dark(#222, #ddd);
 			background-color: light-dark(#fff, #000);
 		}
+
+		a[href]:has(fundraising-status) {
+			display: block;
+			cursor: pointer;
+			text-decoration: none;
+			color: inherit;
+		}
+		a[href]:has(fundraising-status):hover {
+			background-color: rgba(0,0,0,.06);
+		}
+		@media (prefers-color-scheme: dark) {
+			a[href]:has(fundraising-status):hover {
+				background-color: rgba(255,255,255,.15);
+			}
+		}
 		</style>
 		<script type="module" src="fundraising-status.js"></script>
 	</head>
@@ -33,6 +48,15 @@
 				<fundraising-status min="0" max="200" value="100">
 					<img src="https://v1.indieweb-avatar.11ty.dev/https%3A%2F%2Fwww.11ty.dev%2F/" width="30" height="30" alt="11ty Logo" loading="lazy" decoding="async">
 				</fundraising-status>
+			</p>
+
+			<p>
+				Link wrapper
+				<a href="https://opencollective.com/11ty">
+					<fundraising-status min="0" max="200" value="100">
+						<img src="https://v1.indieweb-avatar.11ty.dev/https%3A%2F%2Fwww.11ty.dev%2F/" width="30" height="30" alt="11ty Logo" loading="lazy" decoding="async">
+					</fundraising-status>
+				</a>
 			</p>
 
 			<p>
