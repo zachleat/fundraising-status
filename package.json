@@ -1,0 +1,26 @@
+{
+  "name": "@zachleat/fundraising-status",
+  "version": "1.0.0",
+  "description": "Web component to show the current status of a fundraiser.",
+  "main": "fundraising-status.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "start": "npx http-server ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zachleat/fundraising-status.git"
+  },
+  "author": {
+    "name": "Zach Leatherman",
+    "email": "zachleatherman@gmail.com",
+    "url": "https://zachleat.com/"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zachleat/fundraising-status/issues"
+  },
+  "homepage": "https://github.com/zachleat/fundraising-status#readme"
+}
