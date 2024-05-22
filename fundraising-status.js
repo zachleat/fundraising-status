@@ -13,13 +13,17 @@ a {
 	color: inherit;
 	cursor: pointer;
 }
+a:hover {
+	background-color: rgba(0,0,0,.06);
+}
+@media (prefers-color-scheme: dark) {
+	a:hover {
+		background-color: rgba(255,255,255,.15);
+	}
+}
 progress {
 	flex-grow: 1;
 	accent-color: var(--fs-color);
-}
-img {
-	width: 1.2em;
-	height: 1.2em;
 }
 `;
 
@@ -74,7 +78,7 @@ img {
 
 	async render({min, max, value}) {
 		this.shadowRoot.innerHTML = `<a href="https://opencollective.com/11ty">
-	<img src="https://v1.indieweb-avatar.11ty.dev/https%3A%2F%2Fwww.11ty.dev%2F/" width="150" height="150" alt="11ty Logo" loading="lazy" decoding="async">
+	<slot></slot>
 	<progress min="${min}" max="${max}" value="${value}"></progress>
 	<code>${this.formatPrice(value)}</code>
 	<code>/${this.formatPrice(max)}</code>

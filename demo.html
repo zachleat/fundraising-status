@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<title>Fundraising Status</title>
+		<style>
+		:root {
+			color-scheme: light dark;
+		}
+		body {
+			color: light-dark(#222, #ddd);
+			background-color: light-dark(#fff, #000);
+		}
+		</style>
+		<script type="module" src="fundraising-status.js"></script>
+	</head>
+	<body>
+		<header>
+			<h1>Fundraising Status</h1>
+		</header>
+		<main>
+			<p>Back to the <a href="https://github.com/zachleat/fundraising-status">GitHub source code</a>.</p>
+
+			<p>
+				Empty slot:
+				<fundraising-status min="0" max="200" value="100"></fundraising-status>
+			</p>
+
+			<p>
+				Slot for favicon or other arbitrary html:
+				<fundraising-status min="0" max="200" value="100">
+					<img src="https://v1.indieweb-avatar.11ty.dev/https%3A%2F%2Fwww.11ty.dev%2F/" width="30" height="30" alt="11ty Logo" loading="lazy" decoding="async">
+				</fundraising-status>
+			</p>
+
+			<p>
+				Intl.NumberFormat currency:
+				<fundraising-status min="0" max="200" value="100" currency="USD"></fundraising-status>
+			</p>
+
+			<p>
+				Change accent color:
+				<fundraising-status style="--fs-color: blue"></fundraising-status>
+			</p>
+
+			<p>
+				Scale with font size:
+				<fundraising-status style="font-size: 2em">
+					<img src="https://v1.indieweb-avatar.11ty.dev/https%3A%2F%2Fwww.11ty.dev%2F/" width="30" height="30" alt="11ty Logo" loading="lazy" decoding="async">
+				</fundraising-status>
+			</p>
+		</main>
+	</body>
+</html>
