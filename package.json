@@ -1,6 +1,6 @@
 {
   "name": "@zachleat/fundraising-status",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Web component to show the current status of a fundraiser.",
   "main": "fundraising-status.js",
   "publishConfig": {
