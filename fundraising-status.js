@@ -4,12 +4,15 @@ class FundraisingStatus extends HTMLElement {
 	static css = `
 :host {
 	display: flex;
+	flex-wrap: nowrap;
+	white-space: nowrap;
 	align-items: center;
 	gap: .25em;
 }
 progress {
 	flex-grow: 1;
 	accent-color: var(--fs-color);
+	width: 100%;
 }
 `;
 
