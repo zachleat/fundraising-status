@@ -2,6 +2,10 @@
 
 A web component to show the current status of a fundraiser, including goal amount and current value.
 
+## Demo
+
+* https://zachleat.github.io/fundraising-status/demo.html
+
 ## Installation
 
 You can install via `npm` ([`@zachleat/fundraising-status`](https://www.npmjs.com/package/@zachleat/fundraising-status)) or download the `fundraising-status.js` JavaScript file manually.
