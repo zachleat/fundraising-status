@@ -70,7 +70,7 @@ progress {
 	<progress min="${min}" max="${max}" value="${value}"></progress>
 	<code>${this.formatPrice(value)}</code>
 	<code>/${this.formatPrice(max)}</code>
-	<code>${this.currency}</code>`;
+	${!this.hasAttribute("hide-currency") ? `<code>${this.currency}</code>` : ""}`;
 	}
 }
 
