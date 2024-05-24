@@ -3,16 +3,43 @@ class FundraisingStatus extends HTMLElement {
 
 	static css = `
 :host {
+	--fs-color: #333;
+	--fs-background: #eee;
 	display: flex;
 	flex-wrap: nowrap;
 	white-space: nowrap;
 	align-items: center;
 	gap: .25em;
 }
+@media (prefers-color-scheme: dark) {
+	:host {
+		--fs-color: rgba(255,255,255,.9);
+		--fs-background: rgba(0,0,0,.2);
+	}
+}
 progress {
 	flex-grow: 1;
 	accent-color: var(--fs-color);
 	width: 100%;
+}
+.max,
+.currency {
+	font-size: .8125em;
+}
+@supports (appearance: none) {
+	progress {
+		height: 1em;
+		border-radius: .125em;
+		overflow: hidden;
+		appearance: none;
+	}
+	::-webkit-progress-value {
+		background-color: var(--fs-color);
+	}
+	::-webkit-progress-bar {
+		background-color: var(--fs-background);
+		box-shadow: 0 .125em .3125em rgba(0, 0, 0, 0.25) inset;
+	}
 }
 `;
 
@@ -69,8 +96,8 @@ progress {
 		this.shadowRoot.innerHTML = `<slot></slot>
 	<progress min="${min}" max="${max}" value="${value}"></progress>
 	<code>${this.formatPrice(value)}</code>
-	<code>/${this.formatPrice(max)}</code>
-	${!this.hasAttribute("hide-currency") ? `<code>${this.currency}</code>` : ""}`;
+	<code class="max">/${this.formatPrice(max)}</code>
+	${!this.hasAttribute("hide-currency") ? `<code class="currency">${this.currency}</code>` : ""}`;
 	}
 }
 

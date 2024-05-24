@@ -11,7 +11,7 @@
 		}
 		body {
 			color: light-dark(#222, #ddd);
-			background-color: light-dark(#fff, #000);
+			background-color: light-dark(#fff, #222);
 		}
 
 		a[href]:has(fundraising-status) {
@@ -25,7 +25,7 @@
 		}
 		@media (prefers-color-scheme: dark) {
 			a[href]:has(fundraising-status):hover {
-				background-color: rgba(255,255,255,.15);
+				background-color: rgba(255,255,255,.03);
 			}
 		}
 		</style>
@@ -83,7 +83,7 @@
 
 			<p>
 				Change accent color:
-				<fundraising-status style="--fs-color: blue"></fundraising-status>
+				<fundraising-status style="--fs-color: #e23c2f" min="0" max="2" value="1"></fundraising-status>
 			</p>
 
 			<p>
