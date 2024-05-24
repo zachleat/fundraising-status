@@ -34,7 +34,10 @@ progress {
 		appearance: none;
 	}
 	::-webkit-progress-value {
-		background-color: var(--fs-color);
+		background: var(--fs-color);
+	}
+	::-moz-progress-bar {
+		background: var(--fs-color);
 	}
 	::-webkit-progress-bar {
 		background-color: var(--fs-background);
